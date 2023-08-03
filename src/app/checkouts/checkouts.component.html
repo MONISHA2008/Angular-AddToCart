@@ -1,0 +1,34 @@
+
+<form  [formGroup]="Check">
+
+  <div>
+    <label for="name">Name</label>
+    <input type="text" id="name" formControlName="name" [(ngModel)]="Name">
+
+  </div>
+
+  <div>
+    <label for="address">Address</label>
+    <textarea id="address" formControlName="address"  [(ngModel)]="Address"></textarea>
+
+  </div>
+
+  <div>
+    <label for="email">Email</label>
+    <input type="email" id="email" formControlName="email"  [(ngModel)]="PhoneNumber" required>
+  </div>
+
+  <div>
+    <label for="payment">Payment Method</label>
+    <select id="payment" formControlName="payment" required>
+      <option value="">-- Select Payment Method --</option>
+      <option value="COD">Cash on Delivery</option>
+    </select>
+  </div>
+
+  <button  type="submit" [disabled]="Checkout.invalid">Submit</button>
+  <div>
+
+  </div>
+</form>
+<router-outlet></router-outlet>
